@@ -13,7 +13,7 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
+PROJECT_NAME: str = "xView"
 PROJECT_NAME_FULL: str = None
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
@@ -50,7 +50,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
-PAPER: Optional[Union[str, List[str]]] = None
+PAPER: Optional[Union[str, List[str]]] = "https://arxiv.org/abs/1802.07856"
 BLOGPOST: Optional[Union[str, List[str]]] = None
 CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = None
