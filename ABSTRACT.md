@@ -1,0 +1,18 @@
+The authors of the **xView** dataset introduced a large-scale dataset designed to advance object detection techniques and research in overhead object detection. This satellite imagery dataset was aimed at addressing challenges in four key areas of computer vision. Their approach involved a unique process for geospatial category detection and bounding box annotation, including three stages of quality control. The dataset was collected using WorldView-3 satellites, providing higher-resolution imagery compared to most publicly available satellite datasets. The authors conducted comparisons with other object detection datasets in both natural and overhead imagery domains, leveraging the Single Shot MultiBox Detector for baseline analysis. xView was noted as one of the largest and most diverse publicly accessible object detection datasets to date, comprising over 1 million objects across 60 classes and covering more than 1,400 km² of imagery.
+
+The authors emphasized the significance of overhead image data from satellites and its growing relevance in real-world applications, which called for the development of more sophisticated and robust models and algorithms for object detection. They expressed their hope that xView would serve as a central resource for a wide range of research endeavors in computer vision and overhead object detection.
+
+They highlighted the limited availability of object detection datasets for overhead satellite imagery, characterized by low class counts, poor geographic diversity, limited training instances, or narrow class scopes. xView aimed to address these limitations by conducting extensive labeling efforts across various locations and implementing a hierarchical ontology of parent and child-level classes.
+
+<img src="https://github.com/supervisely/supervisely/assets/78355358/da9491b6-e841-4bdf-a484-52c0f5f9f578" alt="image" width="800">
+
+The authors outlined the four computer vision frontiers that xView targeted, including improving minimum resolution and multi-scale recognition, enhancing learning efficiency for imbalanced datasets, pushing the limit of discoverable object classes, and improving the detection of fine-grained classes. They noted that over 80% of the classes in xView were fine-grained, which required precise object detection.
+
+<img src="https://github.com/supervisely/supervisely/assets/78355358/257ad65e-611b-4ea0-838c-4014a90cf73b" alt="image" width="800">
+
+Details about the dataset were provided, covering aspects such as image collection, annotation methodology, quality control, gold standards, and dataset statistics. The dataset encompassed a diverse range of classes (analogous with their real-world prevalence, buildings and small cars have the highest instance counts), spanned various geographic regions, and featured objects of different sizes, presenting unique challenges for object detection algorithms. The authors conducted rigorous quality control measures, involving multiple stages of review and validation, to ensure the accuracy and consistency of annotations.
+
+<img src="https://github.com/supervisely/supervisely/assets/78355358/9efd808a-490f-4d1f-b510-fe7c2dc1cf5d" alt="image" width="800">
+
+The dataset was divided into three splits for public release: *train*, *test*, and *val*, with specific percentages allocated to each split. These splits were based on per-image levels, and the authors aimed to ensure each category had a sufficient number of instances in each split. Comparisons with other object detection datasets were made, highlighting the unique characteristics and diversity of xView.
+

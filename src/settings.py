@@ -13,37 +13,43 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "xView"
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "xView 2018"
+PROJECT_NAME_FULL: str = "DIUx xView: Objects in Context in Overhead Imagery 2018 Challenge"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.CC_BY_NC_SA_4_0()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Domain.Geospatial()]
+CATEGORY: Category = Category.Aerial(extra=Category.Satellite())
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2018
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://challenge.xviewdataset.org"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = None
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/xview"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://challenge.xviewdataset.org/download-links"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -52,11 +58,20 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If you have more than the one paper, put the most relatable link as the first element of the list
 PAPER: Optional[Union[str, List[str]]] = "https://arxiv.org/abs/1802.07856"
 BLOGPOST: Optional[Union[str, List[str]]] = None
-CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+CITATION_URL: Optional[str] = "https://challenge.xviewdataset.org/rules"
+AUTHORS: Optional[List[str]] = [
+    "Darius Lam",
+    "Richard Kuzma",
+    "Kevin McGee",
+    "Samuel Dooley",
+    "Michael Laielli",
+    "Matthew Klaric",
+    "Yaroslav Bulatov",
+    "Brendan McCord",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "DIU, USA"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.diu.mil/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with value:str to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
