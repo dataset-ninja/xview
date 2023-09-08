@@ -4,6 +4,4 @@ The dataset consists of 1127 images with 601726 labeled objects belonging to 60 
 
 Images in the xView 2018 dataset have bounding box annotations. There are 281 (25% of the total) unlabeled images (i.e. without annotations). There are 2 splits in the dataset: *train* (846 images) and *val* (281 images). Additionally, objects contain information about ***parent*** classes and ***coordinates***. Explore them in supervisely. The dataset was released in 2018 by the Defense Innovation Unit (DIU), USA.
 
-Here is the visualized example grid with annotations:
-
-<img src="https://github.com/dataset-ninja/xview/raw/main/visualizations/horizontal_grid.png">
+<img src="https://github.com/dataset-ninja/xview/raw/main/visualizations/poster.png">

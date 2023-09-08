@@ -1,6 +1,6 @@
 Dataset **xView 2018** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](Set 'HIDE_DATASET=False' to generate download link)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/M/K/3t/1paOeCnOr52Df9P7qjhqxe0xDnSSH7B4YS7t7iMrUfxdRiSZYLo4KqhZTfqbCVrtcUwCHhAlGzLh3GngpVr5fav1L7bg2W39C7W5YYYNQIqaL2GM8TQYRBpaEHix.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
