@@ -49,9 +49,9 @@ def convert_and_upload_supervisely_project(
             if obj_class is None:
                 continue
 
-            parent_value = class_to_parents.get(obj_class.name)
+            parent_value = class_to_parent.get(obj_class.name)
             if parent_value is not None:
-                tag_parent = sly.Tag(tag_parents, value=parent_value)
+                tag_parent = sly.Tag(tag_parent, value=parent_value)
                 label_tags.append(tag_parent)
 
             left = bbox[0]
@@ -141,7 +141,7 @@ def convert_and_upload_supervisely_project(
         94: "tower",
     }
 
-    class_to_parents = {
+    class_to_parent = {
         "small aircraft": "fixed-wing aircraft",
         "cargo plane": "fixed-wing aircraft",
         "small car": "passenger vehicle",
@@ -198,13 +198,13 @@ def convert_and_upload_supervisely_project(
     )
     tag_geo_coords = sly.TagMeta("coordinates", sly.TagValueType.ANY_STRING)
 
-    tag_parents = sly.TagMeta("parents", sly.TagValueType.ANY_STRING)
+    tag_parent = sly.TagMeta("parent", sly.TagValueType.ANY_STRING)
 
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)
 
     meta = sly.ProjectMeta(
         obj_classes=list(idx_to_class.values()),
-        tag_metas=[tag_reference, tag_geo_coords, tag_parents],
+        tag_metas=[tag_reference, tag_geo_coords, tag_parent],
     )
     api.project.update_meta(project.id, meta.to_json())
 
