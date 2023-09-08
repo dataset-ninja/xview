@@ -1,0 +1,7 @@
+**DIUx xView: Objects in Context in Overhead Imagery 2018 Challenge** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the geospatial domain. 
+
+The dataset consists of 1127 images with 601726 labeled objects belonging to 60 different classes including *building*, *small car*, *truck*, and other: *bus*, *cargo truck*, *vehicle lot*, *utility truck*, *trailer*, *truck w/box*, *dump truck*, *facility*, *storage tank*, *pickup truck*, *shed*, *passenger vehicle*, *truck w/flatbed*, *front loader/bulldozer*, *excavator*, *construction site*, *damaged building*, *shipping container lot*, *truck tractor*, *cargo plane*, *mobile crane*, *engineering vehicle*, *shipping container*, *motorboat*, *pylon*, and 32 more.
+
+Images in the xView 2018 dataset have pixel-level instance segmentation annotations. Due to the nature of the instance segmentation task, it can be automatically transformed into a semantic segmentation (only one mask for every class) or object detection (bounding boxes for every object) tasks. There are 281 (25% of the total) unlabeled images (i.e. without annotations). There are 2 splits in the dataset: *train* (846 images) and *val* (281 images). Additionally, objects contain information about ***parent*** classes and ***coordinates***. Explore them in supervisely.. The dataset was released in 2018 by the DIU, USA.
+
+<img src="https://github.com/dataset-ninja/xview/raw/main/visualizations/poster.png">
