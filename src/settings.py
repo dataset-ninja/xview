@@ -25,11 +25,9 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [Domain.Geospatial()]
 CATEGORY: Category = Category.Aerial(extra=Category.Satellite())
 
 CV_TASKS: List[CVTask] = [
-    CVTask.InstanceSegmentation(),
-    CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
 ]
-ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
@@ -133,12 +131,12 @@ AUTHORS: Optional[List[str]] = [
     "Brendan McCord",
 ]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "DIU, USA"
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Defense Innovation Unit (DIU), USA"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.diu.mil/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with value:str to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__":"Additionally, objects contain information about ***parent*** classes and ***coordinates***. Explore them in supervisely."
+    "__PRETEXT__":"Additionally, objects contain information about ***parent*** classes and ***coordinates***. Explore them in supervisely"
 }
 TAGS: Optional[List[str]] = None
 
