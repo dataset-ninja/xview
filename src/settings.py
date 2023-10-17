@@ -20,7 +20,7 @@ HIDE_DATASET = False  # set False when 100% sure about repo quality
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = License.CC_BY_NC_SA_4_0()
+LICENSE: License = License.CC_BY_NC_SA_4_0(source_url="https://challenge.xviewdataset.org/data-download")
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Domain.Geospatial()]
 CATEGORY: Category = Category.Aerial(extra=Category.Satellite())
 
