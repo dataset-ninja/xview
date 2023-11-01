@@ -130,6 +130,7 @@ AUTHORS: Optional[List[str]] = [
     "Yaroslav Bulatov",
     "Brendan McCord",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["xview@diux.mil"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Defense Innovation Unit (DIU), USA"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.diu.mil/"
@@ -184,6 +185,7 @@ def get_settings():
     settings["blog"] = BLOGPOST
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
